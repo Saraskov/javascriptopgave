@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skatteberegner</title>
+    
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+ <div class="container">
+    <h1 class="title">Hvad skal du betale i skat?</h1>
+    <div class="form">
+        <h2 class="title">Indtast her</h2>
+        <p id="fejl"></p>
+        <label id="fornavn">Fornavn<span class="stjerne" id="stj1"></span></label>
+        <br>
+        <input type="text" id="forNavn">
+        <br><br>
+        <label>Efternavn<span class="stjerne" id="stj2"></span></label>
+        <br>
+        <input type="text" id="efterNavn">
+        <br><br>
+        <label>Løn<span class="stjerne" id="stj3"></span></label>
+        <br>
+        <input type="text" id="lon">
+        <br><br>
+        <label>Region Danmark</label>
+        <br>
+        <select id="region">
+            <option value="nordsjaelland">Nordsjælland</option>
+            <option value="hovedstaden">Hovedstaden</option>
+            <option value="syddanmark">Syd Danmark</option>
+            <option value="midtjylland">Midt Jylland</option>
+            <option value="nordjylland">Nord Jylland</option>
+        </select>
+        <br>
+        <button id="udregn" class="btn btn-primary">Udregn</button>
+        <br><br>
+        
+    </div>
+    <div class="formResultat">
+        <h2 class="title">Se dine svar her</h2>
+        <p id="resultat">Indtast dine oplysninger først</p>
+        <h4 id="lonOutput"></h4>
+        <p id="skat"></p>
+        <h4 id="skatOutput"></h4>
+        <p id="placering"></p>
+    </div>
+    <div class="gennemsnit">
+        <h2>Gennemsnit indkomst</h2>
+        <p id="forskat">Før skat: </p>
+        <p id="efterskat">Efter skat: </p>
+    
+    </div>
+ </div>
+    
+    <!-- Bootstrap og jquery scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Personal script -->
+    <script src="main.js"></script>
+</body>
+</html>

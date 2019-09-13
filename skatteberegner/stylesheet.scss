@@ -1,0 +1,55 @@
+//Global variabler
+$primary-color: #ddd;
+$danger: #DC3545;
+$center: center;
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "input output"
+    "gennemsnit gennemsnit";
+    grid-gap: 20px;
+}
+
+.title {
+    grid-area: title;
+    text-align: $center;
+}
+
+.form {
+    grid-area: input;
+    padding: 25px 25px;
+    background-color: $primary-color;
+
+        .stjerne {
+            color: $danger;
+        }
+}
+
+#fejl {
+    text-align: $center;
+    color: $danger;
+}
+
+#region{
+    margin-bottom: 15px;
+}
+
+.formResultat {
+    grid-area: output;
+    padding: 25px 25px;
+    background-color: $primary-color;
+    text-align: $center;
+}
+.gennemsnit {
+    grid-area: gennemsnit;
+    background-color: $primary-color;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        display: block;
+        text-align: center;
+    }
+}
