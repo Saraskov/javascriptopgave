@@ -1,0 +1,63 @@
+<!-- Lav en Select liste med tal fra 1-10, console.log et loop hvor den ganger tallene med 5 indtil i er == det valgte tal i select listen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select liste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="indtast">
+            <h2>Vælg et tal</h2>
+            <select id="vaelgTal">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button id="send">Send</button>
+        </div>
+        <div id="myList"></div>
+    </div>
+
+    <script>
+        let send = document.querySelector('#send');
+        send.addEventListener("click", sendUd);
+
+        
+
+        function sendUd(){ 
+            
+            let chooseNumber = parseFloat(document.querySelector('#vaelgTal').value);           
+            for (let i=1; i<=chooseNumber; i++){
+                let divName = document.createElement("div");
+                    divName.classList.add("name");
+                let nameLabel = document.createElement("LABEL");
+                    nameLabel.innerHTML = "Name:";
+                let name = document.createElement("INPUT");
+                    name.setAttribute("type", "text");
+                let lastNameLabel = document.createElement("LABEL")
+                    lastNameLabel.innerHTML = "Last name:";
+                let lastName = document.createElement("INPUT");
+                    lastName.setAttribute("type", "text");
+                
+                divName.appendChild(nameLabel);
+                divName.appendChild(name);
+                divName.appendChild(lastNameLabel);
+                divName.appendChild(lastName);
+                document.querySelector('#myList').appendChild(divName);
+                //document.body.appendChild(divName); //<--- Ligger det ind nederst i documentet
+            }
+        }
+    </script>
+</body>
+</html>

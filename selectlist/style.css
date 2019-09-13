@@ -1,0 +1,28 @@
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex: 1fr 1fr;
+}
+
+.indtast {
+    width: 50%;
+}
+
+.indtast select {
+    width: 100px;
+}
+
+#myList {
+    background-color: #dddddd;
+    width: 50%;
+    height: auto;
+    min-height: 300px;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+.name > * {
+    margin: 0 5px;
+}
